@@ -3,69 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Business Card</title>
-
-    <!-- CSS -->
+    <title>ROM Designer | Digital Card</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <link rel="stylesheet" href="style.css">
-
-    <!-- QR Code Library -->
-    <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
 </head>
 <body>
 
-    <main class="card">
+    <div class="card-wrapper">
+        <div class="decoration top-left"></div>
+        <div class="decoration top-right"></div>
+        <div class="decoration bottom-left"></div>
+        <div class="decoration bottom-right"></div>
 
-        <!-- PROFILE SECTION -->
-        <section class="profile">
-            <img src="https://via.placeholder.com/150" alt="Profile Photo">
-            <h1>Akshar Savaliya</h1>
-            <p class="role">AI Engineer</p>
-            <p class="company">Wasserstoff Innovation Labs</p>
-        </section>
+        <div class="card-content">
+            
+            <div class="header">
+                <div class="logo-circle">
+                    <img src="logo.png" alt="ROM Designer Logo">
+                </div>
+                 <h1>ROM Designer</h1>
+                <p class="subtitle">Digital Creator</p>
+                <p class="slogan">Turning vision into action.</p>
+            </div>
 
-        <!-- ACTION BUTTONS -->
-        <section class="actions">
-            <a href="tel:+919876543210">📞 Call</a>
-            <a href="https://wa.me/919876543210" target="_blank">💬 WhatsApp</a>
-            <a href="mailto:akshar@email.com">✉️ Email</a>
-            <a href="https://example.com" target="_blank">🌐 Website</a>
-        </section>
+            <div class="links-container">
+                <a href="https://api.whatsapp.com" target="_blank" class="btn-link">
+                    <div class="icon-box"><i class="fa-brands fa-whatsapp"></i></div>
+                    <span>WhatsApp Contact</span>
+                </a>
 
-        <!-- SOCIAL LINKS -->
-        <section class="socials">
-            <a href="#" target="_blank">Instagram</a>
-            <a href="#" target="_blank">LinkedIn</a>
-            <a href="#" target="_blank">YouTube</a>
-        </section>
+                <a href="http://www.romdesigner.in" target="_blank" class="btn-link">
+                    <div class="icon-box"><i class="fa-solid fa-globe"></i></div>
+                    <span>Visit Website</span>
+                </a>
 
-        <!-- CONTACT FORM -->
-        <section class="form-section">
-            <h2>Send Inquiry</h2>
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="tel" placeholder="Mobile Number" required>
-                <input type="email" placeholder="Email Address">
-                <textarea placeholder="Message"></textarea>
-                <button type="submit">Submit</button>
-            </form>
-        </section>
+                <a href="https://www.youtube.com" target="_blank" class="btn-link">
+                    <div class="icon-box"><i class="fa-brands fa-youtube"></i></div>
+                    <span>YouTube Channel</span>
+                </a>
+            </div>
 
-        <!-- QR CODE -->
-        <section class="qr-section">
-            <h2>Scan My Card</h2>
-            <div id="qrcode"></div>
-        </section>
+            <div class="portfolio-section">
+                <p class="section-title">Latest Designs</p>
+                
+                <a href="https://romdesigner.blogspot.com/2022/05/hm-and-ld-22-x32-22x34.html?m=1" target="_blank" class="btn-link small">
+                    <div class="icon-box"><i class="fa-solid fa-image"></i></div>
+                    <span>HM & LD Design</span>
+                </a>
 
-    </main>
+                <a href="https://romdesigner.blogspot.com/2021/03/dryfruit-standy-pouch.html?m=1" target="_blank" class="btn-link small">
+                    <div class="icon-box"><i class="fa-solid fa-bag-shopping"></i></div>
+                    <span>Dryfruit Pouch</span>
+                </a>
 
-    <!-- QR GENERATOR SCRIPT -->
-    <script>
-        new QRCode(document.getElementById("qrcode"), {
-            text: window.location.href,
-            width: 180,
-            height: 180
-        });
-    </script>
+                <a href="https://romdesigner.blogspot.com/2022/05/carrybag-design-14x20.html?m=1" target="_blank" class="btn-link small">
+                    <div class="icon-box"><i class="fa-solid fa-bag-shopping"></i></div>
+                    <span>Carrybag Design</span>
+                </a>
+
+                <a href="https://romdesigner.blogspot.com/2023/07/nonwoven-4-colour.html?m=1" target="_blank" class="btn-link small">
+                    <div class="icon-box"><i class="fa-solid fa-palette"></i></div>
+                    <span>Nonwoven 4-Colour</span>
+                </a>
+
+                <a href="https://romdesigner.blogspot.com/2022/01/kantan-patter-design.html?m=1" target="_blank" class="btn-link small">
+                    <div class="icon-box"><i class="fa-solid fa-layer-group"></i></div>
+                    <span>Kantan Pattern</span>
+                </a>
+            </div>
+
+            <div class="social-footer">
+                <a href="https://www.instagram.com/romdesigner" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                
+                <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+
+        </div>
+    </div>
 
 </body>
 </html>
