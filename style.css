@@ -1,0 +1,136 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* BODY */
+body {
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* CARD CONTAINER */
+.card {
+    width: 100%;
+    max-width: 420px;
+    background: #ffffff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* PROFILE */
+.profile {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 28px 20px;
+}
+
+.profile img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 14px;
+}
+
+.profile h1 {
+    font-size: 22px;
+    margin-bottom: 4px;
+}
+
+.profile .role {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.profile .company {
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+/* ACTION BUTTONS */
+.actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 20px;
+}
+
+.actions a {
+    text-decoration: none;
+    background: #000;
+    color: #fff;
+    padding: 12px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* SOCIAL LINKS */
+.socials {
+    display: flex;
+    justify-content: space-around;
+    padding: 16px;
+    border-top: 1px solid #eee;
+}
+
+.socials a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #000;
+}
+
+/* FORM SECTION */
+.form-section {
+    padding: 20px;
+}
+
+.form-section h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.form-section input,
+.form-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.form-section textarea {
+    resize: none;
+    height: 80px;
+}
+
+.form-section button {
+    width: 100%;
+    padding: 12px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* QR SECTION */
+.qr-section {
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+.qr-section h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Business Card</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- QR Code Library -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+</head>
+<body>
+
+    <main class="card">
+
+        <!-- PROFILE SECTION -->
+        <section class="profile">
+            <img src="https://via.placeholder.com/150" alt="Profile Photo">
+            <h1>Akshar Savaliya</h1>
+            <p class="role">AI Engineer</p>
+            <p class="company">Wasserstoff Innovation Labs</p>
+        </section>
+
+        <!-- ACTION BUTTONS -->
+        <section class="actions">
+            <a href="tel:+919876543210">📞 Call</a>
+            <a href="https://wa.me/919876543210" target="_blank">💬 WhatsApp</a>
+            <a href="mailto:akshar@email.com">✉️ Email</a>
+            <a href="https://example.com" target="_blank">🌐 Website</a>
+        </section>
+
+        <!-- SOCIAL LINKS -->
+        <section class="socials">
+            <a href="#" target="_blank">Instagram</a>
+            <a href="#" target="_blank">LinkedIn</a>
+            <a href="#" target="_blank">YouTube</a>
+        </section>
+
+        <!-- CONTACT FORM -->
+        <section class="form-section">
+            <h2>Send Inquiry</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="tel" placeholder="Mobile Number" required>
+                <input type="email" placeholder="Email Address">
+                <textarea placeholder="Message"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <!-- QR CODE -->
+        <section class="qr-section">
+            <h2>Scan My Card</h2>
+            <div id="qrcode"></div>
+        </section>
+
+    </main>
+
+    <!-- QR GENERATOR SCRIPT -->
+    <script>
+        new QRCode(document.getElementById("qrcode"), {
+            text: window.location.href,
+            width: 180,
+            height: 180
+        });
+    </script>
+
+</body>
+</html>
