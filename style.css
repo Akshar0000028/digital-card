@@ -1,4 +1,4 @@
-/* General Reset */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: rgb(248, 255, 246); /* Dark background for desktop view */
+    background-color: rgb(248, 255, 246);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,24 +15,24 @@ body {
     padding: 20px;
 }
 
-/* Card Wrapper - Simulates the Phone Screen */
+/* CARD */
 .card-wrapper {
     position: relative;
     width: 100%;
     max-width: 380px;
-    background-color: #011F18; /* Deep Green from image */
+    background-color: #011F18;
     border-radius: 35px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    overflow: hidden; /* Clips content inside rounded corners */
-    border: 8px solid #000; /* Phone Bezel */
+    border: 8px solid #000;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* Decorative Corners */
+/* DECORATION */
 .decoration {
     position: absolute;
     width: 80px;
     height: 80px;
-    background-color: #4A675E; /* Muted Sage Green */
+    background-color: #4A675E;
     z-index: 1;
 }
 
@@ -60,140 +60,175 @@ body {
     border-top-left-radius: 100%;
 }
 
-/* Content Container */
+/* CONTENT */
 .card-content {
     position: relative;
     z-index: 10;
-    padding: 60px 30px 40px 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 60px 30px 40px;
     text-align: center;
     color: white;
 }
 
-/* Header Section & LOGO STYLES */
-.header {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
+/* HEADER */
 .logo-circle {
     width: 90px;
     height: 90px;
-    /* Optional: Add a background color if your logo is transparent */
-    /* background-color: white; */
     border-radius: 50%;
-    border: 3px solid #8FB3A7; /* Accent border color */
-    overflow: hidden; /* Ensures the image stays inside the circle */
-    margin: 0 auto 20px auto; /* Center horizontally, margin bottom */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border: 3px solid #8FB3A7;
+    overflow: hidden;
+    margin: 0 auto 20px;
 }
 
 .logo-circle img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures image fills the circle perfectly */
+    object-fit: cover;
 }
 
 h1 {
     font-size: 28px;
     font-weight: 600;
-    letter-spacing: 1px;
-    margin-bottom: 5px;
-    text-transform: uppercase;
 }
 
 .subtitle {
     font-size: 16px;
-    font-weight: 600;
-    color: #e0e0e0;
-    margin-bottom: 15px;
+    margin: 8px 0;
 }
 
 .slogan {
     font-size: 14px;
-    font-weight: 300;
     opacity: 0.8;
     margin-bottom: 30px;
 }
 
-/* Links Container */
+/* LINKS */
 .links-container {
-    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-/* Portfolio Section */
-.portfolio-section {
-    width: 100%;
-    margin-top: 25px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.section-title {
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #8FB3A7;
-    margin-bottom: 5px;
-}
-
-/* Buttons */
 .btn-link {
     display: flex;
     align-items: center;
-    background-color: white;
+    background: white;
     color: #011F18;
     text-decoration: none;
     padding: 12px 20px;
     border-radius: 50px;
-    width: 100%;
     font-weight: 500;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.btn-link:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255,255,255,0.2);
+    cursor: pointer;
 }
 
 .icon-box {
     margin-right: 15px;
     font-size: 18px;
     width: 20px;
+}
+
+/* YOUTUBE SLIDER */
+.yt-slider {
+    display: none;
+    width: 100%;
+    margin-top: 15px;
+    position: relative;
+}
+
+.yt-track {
     display: flex;
-    justify-content: center;
+    overflow: hidden;
 }
 
-/* Smaller Buttons for Portfolio items */
-.btn-link.small {
-    padding: 10px 20px;
+.yt-track iframe {
+    min-width: 100%;
+    height: 200px;
+    border-radius: 15px;
+    border: none;
+}
+
+/* PRODUCT SLIDER */
+.product-slider {
+    display: none;
+    width: 100%;
+    margin-top: 15px;
+    position: relative;
+}
+
+.product-track {
+    display: flex;
+    overflow: hidden;
+}
+
+.product-card {
+    min-width: 100%;
+    background: white;
+    border-radius: 15px;
+    text-decoration: none;
+    color: #011F18;
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.product-card p {
     font-size: 14px;
-    background-color: rgba(255, 255, 255, 0.9);
+    font-weight: 600;
+    margin: 10px 0;
 }
 
-/* Footer Socials */
+/* NAV BUTTONS */
+.yt-nav,
+.product-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    font-size: 22px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.yt-nav.left,
+.product-nav.left {
+    left: -10px;
+}
+
+.yt-nav.right,
+.product-nav.right {
+    right: -10px;
+}
+
+/* PORTFOLIO */
+.portfolio-section {
+    margin-top: 25px;
+}
+
+.section-title {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #8FB3A7;
+    margin-bottom: 10px;
+}
+
+.btn-link.small {
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* FOOTER */
 .footer {
     margin-top: 40px;
-    display: flex;
-    gap: 25px;
-}
-
-.footer a {
-    color: white;
-    font-size: 24px;
-    transition: color 0.3s;
-}
-
-.footer a:hover {
-    color: #8FB3A7;
+    font-size: 14px;
+    opacity: 0.8;
 }
