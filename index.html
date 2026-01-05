@@ -20,13 +20,11 @@
 
     <div class="card-wrapper">
 
-        <!-- Decorative Corners -->
         <div class="decoration top-left"></div>
         <div class="decoration top-right"></div>
         <div class="decoration bottom-left"></div>
         <div class="decoration bottom-right"></div>
 
-        <!-- Card Content -->
         <div class="card-content">
 
             <!-- HEADER -->
@@ -42,7 +40,7 @@
             <!-- LINKS -->
             <div class="links-container">
 
-                <a href="https://api.whatsapp.com" target="_blank" class="btn-link">
+                <a href="https://api.whatsapp.com/send?phone=919376277700" target="_blank" class="btn-link">
                     <div class="icon-box"><i class="fa-brands fa-whatsapp"></i></div>
                     <span>WhatsApp Contact</span>
                 </a>
@@ -52,69 +50,36 @@
                     <span>Visit Website</span>
                 </a>
 
-                <!-- YOUTUBE BUTTON -->
+                <!-- YOUTUBE -->
                 <div class="btn-link yt-toggle" id="ytToggle">
                     <div class="icon-box"><i class="fa-brands fa-youtube"></i></div>
                     <span>YouTube Videos</span>
                 </div>
 
-                <!-- YOUTUBE SLIDER -->
                 <div class="yt-slider" id="ytSlider">
                     <button class="yt-nav left" onclick="slideYT(-1)">‹</button>
 
                     <div class="yt-track" id="ytTrack">
-                        <iframe src="https://www.youtube.com/embed/pXdUmWmyYso"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-
-                        <iframe src="https://www.youtube.com/embed/pXdUmWmyYso"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe>
                     </div>
 
                     <button class="yt-nav right" onclick="slideYT(1)">›</button>
                 </div>
 
-                <!-- PRODUCTS BUTTON -->
-                <div class="btn-link product-toggle" id="productToggle">
-                    <div class="icon-box"><i class="fa-solid fa-box-open"></i></div>
-                    <span>Our Products</span>
-                </div>
-
-                <!-- PRODUCT SLIDER -->
-                <div class="product-slider" id="productSlider">
-                    <button class="product-nav left" onclick="slideProduct(-1)">‹</button>
-
-                    <div class="product-track" id="productTrack">
-
-                        <a href="https://romdesigner.blogspot.com/2022/05/hm-and-ld-22-x32-22x34.html?m=1" target="_blank" class="product-card">
-                            <img src="/packaging.png" alt="Product 1">
-                            <p>Packaging Design</p>
-                        </a>
-
-                        <a href="https://romdesigner.blogspot.com/2022/05/hm-and-ld-22-x32-22x34.html?m=1" target="_blank" class="product-card">
-                            <img src="/packaging.png" alt="Product 2">
-                            <p>Brand Identity</p>
-                        </a>
-
-                        <a href="https://www.romdesigner.in/product-3" target="_blank" class="product-card">
-                            <img src="https://via.placeholder.com/400x200" alt="Product 3">
-                            <p>Creative Artwork</p>
-                        </a>
-
-                    </div>
-
-                    <button class="product-nav right" onclick="slideProduct(1)">›</button>
-                </div>
+                <!-- INQUIRY -->
+                <a href="inquiry.html" class="btn-link">
+                    <div class="icon-box"><i class="fa-solid fa-paper-plane"></i></div>
+                    <span>Send Inquiry</span>
+                </a>
 
                 <a href="https://www.instagram.com/romdesignstudio/" target="_blank" class="btn-link">
                     <div class="icon-box"><i class="fa-brands fa-instagram"></i></div>
                     <span>Instagram</span>
                 </a>
-
             </div>
 
-            <!-- PORTFOLIO PAGE LINK -->
+            <!-- PORTFOLIO -->
             <div class="portfolio-section">
                 <p class="section-title">Portfolio</p>
                 <a href="portfolio.html" class="btn-link small">
@@ -123,46 +88,73 @@
                 </a>
             </div>
 
-            <!-- FOOTER -->
-            <footer class="footer">
-                © 2026 ROM Designer
-            </footer>
+            <!-- LOCATION -->
+            <div class="portfolio-section">
+                <p class="section-title">Location</p>
+                <a href="https://google.com/maps/place/Rom+Design/@21.1869355,72.8442713" target="_blank"
+                    class="btn-link small">
+                    <div class="icon-box"><i class="fa-solid fa-location-dot"></i></div>
+                    <span>ROM Design – Surat</span>
+                </a>
+            </div>
+
+            <!-- SHARE SECTION -->
+            <div class="share-section">
+                <p class="section-title">Share Profile</p>
+
+                <div class="share-url">
+                    <input type="text" value="https://qr.bytecard.in/rom-design/rom-design" readonly>
+                    <button onclick="copyLink()"><i class="fa-regular fa-copy"></i></button>
+                </div>
+
+                <p class="qr-text">Scan QR to open profile</p>
+
+                <img src="static-qr-code-697d4ec02436a199b4f002132d257191.png" alt="QR Code" class="qr-img">
+
+                <a href="qr.png" download class="btn-link small">
+                    <div class="icon-box"><i class="fa-solid fa-download"></i></div>
+                    <span>Save QR</span>
+                </a>
+
+                <div class="wp-share">
+                    <span>(+91)</span>
+                    <input type="tel" id="wpNumber" placeholder="Enter whatsapp number">
+                    <button onclick="shareWP()">
+                        <i class="fa-brands fa-whatsapp"></i> Share
+                    </button>
+                </div>
+            </div>
+
+            <footer class="footer">© 2026 ROM Designer</footer>
 
         </div>
     </div>
 
-    <!-- JAVASCRIPT -->
     <script>
-        /* YOUTUBE SLIDER */
         const ytToggle = document.getElementById("ytToggle");
         const ytSlider = document.getElementById("ytSlider");
         const ytTrack = document.getElementById("ytTrack");
         let ytIndex = 0;
 
-        ytToggle.addEventListener("click", () => {
+        ytToggle.onclick = () => {
             ytSlider.style.display = ytSlider.style.display === "block" ? "none" : "block";
-        });
+        };
 
-        function slideYT(direction) {
-            const total = ytTrack.children.length;
-            ytIndex = (ytIndex + direction + total) % total;
+        function slideYT(dir) {
+            ytIndex = (ytIndex + dir + ytTrack.children.length) % ytTrack.children.length;
             ytTrack.scrollTo({ left: ytIndex * ytTrack.offsetWidth, behavior: "smooth" });
         }
 
-        /* PRODUCT SLIDER */
-        const productToggle = document.getElementById("productToggle");
-        const productSlider = document.getElementById("productSlider");
-        const productTrack = document.getElementById("productTrack");
-        let productIndex = 0;
+        function copyLink() {
+            navigator.clipboard.writeText("https://qr.bytecard.in/rom-design/rom-design");
+            alert("Link copied!");
+        }
 
-        productToggle.addEventListener("click", () => {
-            productSlider.style.display = productSlider.style.display === "block" ? "none" : "block";
-        });
-
-        function slideProduct(direction) {
-            const total = productTrack.children.length;
-            productIndex = (productIndex + direction + total) % total;
-            productTrack.scrollTo({ left: productIndex * productTrack.offsetWidth, behavior: "smooth" });
+        function shareWP() {
+            const num = document.getElementById("wpNumber").value;
+            if (!num) return alert("Enter WhatsApp number");
+            const url = `https://wa.me/91${num}?text=Check%20my%20profile:%20https://qr.bytecard.in/rom-design/rom-design`;
+            window.open(url, "_blank");
         }
     </script>
 

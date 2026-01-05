@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Inquiry | ROM Designer</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Same CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="card-wrapper">
+
+        <!-- Decorative Corners -->
+        <div class="decoration top-left"></div>
+        <div class="decoration top-right"></div>
+        <div class="decoration bottom-left"></div>
+        <div class="decoration bottom-right"></div>
+
+        <div class="card-content">
+
+            <!-- HEADER -->
+            <div class="header">
+                <h1>Inquiry</h1>
+                <p class="slogan">Tell us about your requirement</p>
+            </div>
+
+            <!-- INQUIRY FORM -->
+            <form class="links-container" onsubmit="sendInquiry(event)">
+
+                <input type="text" id="name" placeholder="Your Name" required class="btn-link">
+
+                <input type="tel" id="phone" placeholder="WhatsApp Number" required class="btn-link">
+
+                <input type="email" id="email" placeholder="Email Address" class="btn-link">
+
+                <textarea id="message" placeholder="Your Message" required class="btn-link"
+                    style="border-radius:20px;height:120px;"></textarea>
+
+                <button type="submit" class="btn-link">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </div>
+                    <span>Send Inquiry</span>
+                </button>
+
+            </form>
+
+            <!-- BACK BUTTON -->
+            <div style="margin-top:25px;">
+                <a href="index.html" class="btn-link small">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </div>
+                    <span>Back to Profile</span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- SCRIPT -->
+    <script>
+        function sendInquiry(e) {
+            e.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const phone = document.getElementById("phone").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            const text =
+                `New Inquiry%0A%0A` +
+                `Name: ${name}%0A` +
+                `Phone: ${phone}%0A` +
+                `Email: ${email}%0A` +
+                `Message: ${message}`;
+
+            const whatsappURL = `https://wa.me/919376277700?text=${text}`;
+
+            window.open(whatsappURL, "_blank");
+        }
+    </script>
+
+</body>
+
+</html>
