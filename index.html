@@ -20,6 +20,7 @@
 
     <div class="card-wrapper">
 
+        <!-- Decorations -->
         <div class="decoration top-left"></div>
         <div class="decoration top-right"></div>
         <div class="decoration bottom-left"></div>
@@ -50,21 +51,36 @@
                     <span>Website</span>
                 </a>
 
-                <!-- YOUTUBE -->
+                <!-- YOUTUBE TOGGLE -->
                 <div class="btn-link yt-toggle" id="ytToggle">
                     <div class="icon-box"><i class="fa-brands fa-youtube"></i></div>
-                    <span>YouTube </span>
+                    <span>Videos</span>
                 </div>
 
-                <div class="yt-slider" id="ytSlider">
-                    <button class="yt-nav left" onclick="slideYT(-1)">‹</button>
+                <!-- VERTICAL YOUTUBE SLIDER -->
+                <div class="yt-slider vertical" id="ytSlider">
+                    <button class="yt-nav up" onclick="slideYT(-1)">▲</button>
 
-                    <div class="yt-track" id="ytTrack">
-                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
-                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe>
+                    <div class="yt-track vertical" id="ytTrack">
+                        <!-- Replace VIDEO_IDs with your real vertical video IDs -->
+                        <div class="yt-track vertical" id="ytTrack">
+                            <iframe
+                                src="https://www.youtube-nocookie.com/embed/pXdUmWmyYso?playsinline=1&rel=0&modestbranding=1"
+                                allowfullscreen>
+                            </iframe>
+                            <iframe
+                                src="https://www.youtube-nocookie.com/embed/pXdUmWmyYso?playsinline=1&rel=0&modestbranding=1"
+                                allowfullscreen>
+                            </iframe>
+                            <iframe
+                                src="https://www.youtube-nocookie.com/embed/pXdUmWmyYso?playsinline=1&rel=0&modestbranding=1"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+
                     </div>
 
-                    <button class="yt-nav right" onclick="slideYT(1)">›</button>
+                    <button class="yt-nav down" onclick="slideYT(1)">▼</button>
                 </div>
 
                 <!-- INQUIRY -->
@@ -77,6 +93,7 @@
                     <div class="icon-box"><i class="fa-brands fa-instagram"></i></div>
                     <span>Instagram</span>
                 </a>
+
             </div>
 
             <!-- PORTFOLIO -->
@@ -91,14 +108,12 @@
             <!-- LOCATION -->
             <div class="portfolio-section">
                 <p class="section-title">Location</p>
-                <a href="https://google.com/maps/place/Rom+Design/@21.1869355,72.8442713" target="_blank"
-                    class="btn-link small">
+                <a href="https://share.google/4YJ1C0hTWcjlnvZ3s" target="_blank" class="btn-link small">
                     <div class="icon-box"><i class="fa-solid fa-location-dot"></i></div>
                     <span>ROM Design – Surat</span>
                 </a>
             </div>
 
-            <!-- SHARE SECTION -->
             <div class="share-section">
                 <p class="section-title">Share Profile</p>
 
@@ -109,9 +124,9 @@
 
                 <p class="qr-text">Scan QR to open profile</p>
 
-                <img src="static-qr-code-697d4ec02436a199b4f002132d257191.png" alt="QR Code" class="qr-img">
+                <img src="" alt="QR Code" class="qr-img">
 
-                <a href="qr.png" download class="btn-link small">
+                <a href="" download class="btn-link small">
                     <div class="icon-box"><i class="fa-solid fa-download"></i></div>
                     <span>Save QR</span>
                 </a>
@@ -125,10 +140,11 @@
                 </div>
             </div>
 
+            <!-- FOOTER -->
             <footer class="footer">© 2026 ROM Designer</footer>
 
         </div>
-    </div>  
+    </div>
 
     <script>
         const ytToggle = document.getElementById("ytToggle");
@@ -137,12 +153,18 @@
         let ytIndex = 0;
 
         ytToggle.onclick = () => {
-            ytSlider.style.display = ytSlider.style.display === "block" ? "none" : "block";
+            ytSlider.style.display =
+                ytSlider.style.display === "block" ? "none" : "block";
         };
 
-        function slideYT(dir) {
-            ytIndex = (ytIndex + dir + ytTrack.children.length) % ytTrack.children.length;
-            ytTrack.scrollTo({ left: ytIndex * ytTrack.offsetWidth, behavior: "smooth" });
+        function slideYT(direction) {
+            const total = ytTrack.children.length;
+            ytIndex = (ytIndex + direction + total) % total;
+
+            ytTrack.scrollTo({
+                top: ytIndex * ytTrack.offsetHeight,
+                behavior: "smooth"
+            });
         }
 
         function copyLink() {
@@ -153,11 +175,14 @@
         function shareWP() {
             const num = document.getElementById("wpNumber").value;
             if (!num) return alert("Enter WhatsApp number");
-            const url = `https://wa.me/91${num}?text=Check%20my%20profile:%20https://qr.bytecard.in/rom-design/rom-design`;
+            const url =
+                `https://wa.me/91${num}?text=Check%20my%20profile:%20https://qr.bytecard.in/rom-design/rom-design`;
             window.open(url, "_blank");
         }
     </script>
 
 </body>
+
+</html>
 
 </html>
