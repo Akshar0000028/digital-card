@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ROM Designer | Digital Card</title>
+    <title>ROM DESIGNER | Digital Card</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -14,6 +14,18 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Hover Effect -->
+    <style>
+        .btn-link:hover {
+            background-color: #474343;
+            color: #fff;
+            transition: 0.3s ease;
+        }
+        .btn-link:hover i {
+            color: #fff;
+        }
+    </style>
 </head>
 
 <body>
@@ -31,9 +43,9 @@
         <!-- HEADER -->
         <div class="header">
             <div class="logo-circle">
-                <img src="romdesign.png" alt="ROM Designer Logo">
+                <img src="romdesign.png" alt="ROM DESIGNER Logo">
             </div>
-            <h1>ROM Designer</h1>
+            <h1>ROM DESIGNER</h1>
             <p class="subtitle">Professional Designer</p>
             <p class="slogan">Turning vision into action.</p>
         </div>
@@ -41,45 +53,40 @@
         <!-- LINKS -->
         <div class="links-container">
 
-            <a href="https://api.whatsapp.com/send?phone=919376277700" target="_blank" class="btn-link">
+            <!-- WHATSAPP -->
+            <a href="https://api.whatsapp.com/send?phone=919376277700"
+               target="_blank" class="btn-link">
                 <div class="icon-box"><i class="fa-brands fa-whatsapp"></i></div>
                 <span>WhatsApp</span>
             </a>
 
-            <a href="https://www.romdesigner.in" target="_blank" class="btn-link">
+            <!-- WEBSITE -->
+            <a href="https://www.romdesigner.in"
+               target="_blank" class="btn-link">
                 <div class="icon-box"><i class="fa-solid fa-globe"></i></div>
                 <span>Website</span>
             </a>
 
-            <!-- YOUTUBE TOGGLE -->
-            <div class="btn-link yt-toggle" id="ytToggle">
+            <!-- YOUTUBE -->
+            <a href="https://www.youtube.com/channel/UCaVH8KTOhDU-gRFDiLVrBlQ"
+               target="_blank" class="btn-link">
                 <div class="icon-box"><i class="fa-brands fa-youtube"></i></div>
-                <span>Videos</span>
-            </div>
+                <span>YouTube</span>
+            </a>
 
-            <!-- VERTICAL YOUTUBE SLIDER -->
-            <div class="yt-slider vertical" id="ytSlider">
-                <button class="yt-nav up" onclick="slideYT(-1)">▲</button>
+            <!-- INSTAGRAM -->
+            <a href="https://www.instagram.com/romdesignstudio/"
+               target="_blank" class="btn-link">
+                <div class="icon-box"><i class="fa-brands fa-instagram"></i></div>
+                <span>Instagram</span>
+            </a>
 
-                <div class="yt-track vertical" id="ytTrack">
-                    <iframe
-                        src="https://www.youtube-nocookie.com/embed/pXdUmWmyYso?playsinline=1&rel=0&modestbranding=1"
-                        allowfullscreen>
-                    </iframe>
-
-                    <iframe
-                        src="https://www.youtube-nocookie.com/embed/pXdUmWmyYso?playsinline=1&rel=0&modestbranding=1"
-                        allowfullscreen>
-                    </iframe>
-
-                    <iframe
-                        src="https://www.youtube-nocookie.com/embed/pXdUmWmyYso?playsinline=1&rel=0&modestbranding=1"
-                        allowfullscreen>
-                    </iframe>
-                </div>
-
-                <button class="yt-nav down" onclick="slideYT(1)">▼</button>
-            </div>
+            <!-- LOCATION -->
+            <a href="https://share.google/4YJ1C0hTWcjlnvZ3s"
+               target="_blank" class="btn-link">
+                <div class="icon-box"><i class="fa-solid fa-location-dot"></i></div>
+                <span>ROM DESIGN – Surat</span>
+            </a>
 
             <!-- INQUIRY -->
             <a href="inquiry.html" class="btn-link">
@@ -87,29 +94,6 @@
                 <span>Send Inquiry</span>
             </a>
 
-            <a href="https://www.instagram.com/romdesignstudio/" target="_blank" class="btn-link">
-                <div class="icon-box"><i class="fa-brands fa-instagram"></i></div>
-                <span>Instagram</span>
-            </a>
-
-        </div>
-
-        <!-- PORTFOLIO -->
-        <div class="portfolio-section">
-            <p class="section-title">Portfolio</p>
-            <a href="portfolio.html" class="btn-link small">
-                <div class="icon-box"><i class="fa-solid fa-briefcase"></i></div>
-                <span>View Full Portfolio</span>
-            </a>
-        </div>
-
-        <!-- LOCATION -->
-        <div class="portfolio-section">
-            <p class="section-title">Location</p>
-            <a href="https://share.google/4YJ1C0hTWcjlnvZ3s" target="_blank" class="btn-link small">
-                <div class="icon-box"><i class="fa-solid fa-location-dot"></i></div>
-                <span>ROM Design – Surat</span>
-            </a>
         </div>
 
         <!-- SHARE -->
@@ -118,7 +102,9 @@
 
             <div class="share-url">
                 <input type="text" value="https://card.romdesigner.in/" readonly>
-                <button onclick="copyLink()"><i class="fa-regular fa-copy"></i></button>
+                <button onclick="copyLink()">
+                    <i class="fa-regular fa-copy"></i>
+                </button>
             </div>
 
             <p class="qr-text">Scan QR to open profile</p>
@@ -134,7 +120,7 @@
 
             <div class="wp-share">
                 <span>(+91)</span>
-                <input type="tel" id="wpNumber" placeholder="Enter whatsapp number">
+                <input type="tel" id="wpNumber" placeholder="Enter WhatsApp number">
                 <button onclick="shareWP()">
                     <i class="fa-brands fa-whatsapp"></i> Share
                 </button>
@@ -142,33 +128,13 @@
         </div>
 
         <!-- FOOTER -->
-        <footer class="footer">© 2026 ROM Designer</footer>
+        <footer class="footer">© 2026 ROM DESIGNER</footer>
 
     </div>
 </div>
 
 <!-- SCRIPT -->
 <script>
-const ytToggle = document.getElementById("ytToggle");
-const ytSlider = document.getElementById("ytSlider");
-const ytTrack = document.getElementById("ytTrack");
-let ytIndex = 0;
-
-ytToggle.onclick = () => {
-    ytSlider.style.display =
-        ytSlider.style.display === "block" ? "none" : "block";
-};
-
-function slideYT(direction) {
-    const total = ytTrack.children.length;
-    ytIndex = (ytIndex + direction + total) % total;
-
-    ytTrack.scrollTo({
-        top: ytIndex * ytTrack.offsetHeight,
-        behavior: "smooth"
-    });
-}
-
 function copyLink() {
     const link = document.querySelector(".share-url input").value;
     navigator.clipboard.writeText(link);
@@ -179,8 +145,9 @@ function shareWP() {
     const num = document.getElementById("wpNumber").value;
     if (!num) return alert("Enter WhatsApp number");
 
+    const site = window.location.origin;
     const url =
-        `https://wa.me/91${num}?text=Check%20my%20profile:%20https://card.romdesigner.in/`;
+        `https://wa.me/91${num}?text=Check%20my%20profile:%20${site}`;
 
     window.open(url, "_blank");
 }
@@ -188,4 +155,3 @@ function shareWP() {
 
 </body>
 </html>
-
