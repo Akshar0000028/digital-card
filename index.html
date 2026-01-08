@@ -18,171 +18,174 @@
 
 <body>
 
-    <div class="card-wrapper">
+<div class="card-wrapper">
 
-        <!-- Decorations -->
-        <div class="decoration top-left"></div>
-        <div class="decoration top-right"></div>
-        <div class="decoration bottom-left"></div>
-        <div class="decoration bottom-right"></div>
+    <!-- Decorations -->
+    <div class="decoration top-left"></div>
+    <div class="decoration top-right"></div>
+    <div class="decoration bottom-left"></div>
+    <div class="decoration bottom-right"></div>
 
-        <div class="card-content">
+    <div class="card-content">
 
-            <!-- HEADER -->
-            <div class="header">
-                <div class="logo-circle">
-                    <img src="romdesign.png" alt="ROM Designer Logo">
-                </div>
-                <h1>ROM Designer</h1>
-                <p class="subtitle">Professional Designer</p>
-                <p class="slogan">Turning vision into action.</p>
+        <!-- HEADER -->
+        <div class="header">
+            <div class="logo-circle">
+                <img src="romdesign.png" alt="ROM Designer Logo">
+            </div>
+            <h1>ROM Designer</h1>
+            <p class="subtitle">Professional Designer</p>
+            <p class="slogan">Turning vision into action.</p>
+        </div>
+
+        <!-- LINKS -->
+        <div class="links-container">
+
+            <a href="https://api.whatsapp.com/send?phone=919376277700" target="_blank" class="btn-link">
+                <div class="icon-box"><i class="fa-brands fa-whatsapp"></i></div>
+                <span>WhatsApp</span>
+            </a>
+
+            <a href="https://www.romdesigner.in" target="_blank" class="btn-link">
+                <div class="icon-box"><i class="fa-solid fa-globe"></i></div>
+                <span>Website</span>
+            </a>
+
+            <!-- YOUTUBE TOGGLE -->
+            <div class="btn-link yt-toggle" id="ytToggle">
+                <div class="icon-box"><i class="fa-brands fa-youtube"></i></div>
+                <span>Videos</span>
             </div>
 
-            <!-- LINKS -->
-            <div class="links-container">
+            <!-- VERTICAL YOUTUBE SLIDER -->
+            <div class="yt-slider vertical" id="ytSlider">
+                <button class="yt-nav up" onclick="slideYT(-1)">▲</button>
 
-                <a href="https://api.whatsapp.com/send?phone=919376277700" target="_blank" class="btn-link">
-                    <div class="icon-box"><i class="fa-brands fa-whatsapp"></i></div>
-                    <span>WhatsApp</span>
-                </a>
+                <div class="yt-track vertical" id="ytTrack">
+                    <iframe
+                        src="https://www.youtube-nocookie.com/embed/pXdUmWmyYso?playsinline=1&rel=0&modestbranding=1"
+                        allowfullscreen>
+                    </iframe>
 
-                <a href="https://www.romdesigner.in" target="_blank" class="btn-link">
-                    <div class="icon-box"><i class="fa-solid fa-globe"></i></div>
-                    <span>Website</span>
-                </a>
+                    <iframe
+                        src="https://www.youtube-nocookie.com/embed/pXdUmWmyYso?playsinline=1&rel=0&modestbranding=1"
+                        allowfullscreen>
+                    </iframe>
 
-                <!-- YOUTUBE TOGGLE -->
-                <div class="btn-link yt-toggle" id="ytToggle">
-                    <div class="icon-box"><i class="fa-brands fa-youtube"></i></div>
-                    <span>Videos</span>
+                    <iframe
+                        src="https://www.youtube-nocookie.com/embed/pXdUmWmyYso?playsinline=1&rel=0&modestbranding=1"
+                        allowfullscreen>
+                    </iframe>
                 </div>
 
-                <!-- VERTICAL YOUTUBE SLIDER -->
-                <div class="yt-slider vertical" id="ytSlider">
-                    <button class="yt-nav up" onclick="slideYT(-1)">▲</button>
-
-                    <div class="yt-track vertical" id="ytTrack">
-                        <!-- Replace VIDEO_IDs with your real vertical video IDs -->
-                        <div class="yt-track vertical" id="ytTrack">
-                            <iframe
-                                src="https://www.youtube-nocookie.com/embed/pXdUmWmyYso?playsinline=1&rel=0&modestbranding=1"
-                                allowfullscreen>
-                            </iframe>
-                            <iframe
-                                src="https://www.youtube-nocookie.com/embed/pXdUmWmyYso?playsinline=1&rel=0&modestbranding=1"
-                                allowfullscreen>
-                            </iframe>
-                            <iframe
-                                src="https://www.youtube-nocookie.com/embed/pXdUmWmyYso?playsinline=1&rel=0&modestbranding=1"
-                                allowfullscreen>
-                            </iframe>
-                        </div>
-
-                    </div>
-
-                    <button class="yt-nav down" onclick="slideYT(1)">▼</button>
-                </div>
-
-                <!-- INQUIRY -->
-                <a href="inquiry.html" class="btn-link">
-                    <div class="icon-box"><i class="fa-solid fa-paper-plane"></i></div>
-                    <span>Send Inquiry</span>
-                </a>
-
-                <a href="https://www.instagram.com/romdesignstudio/" target="_blank" class="btn-link">
-                    <div class="icon-box"><i class="fa-brands fa-instagram"></i></div>
-                    <span>Instagram</span>
-                </a>
-
+                <button class="yt-nav down" onclick="slideYT(1)">▼</button>
             </div>
 
-            <!-- PORTFOLIO -->
-            <div class="portfolio-section">
-                <p class="section-title">Portfolio</p>
-                <a href="portfolio.html" class="btn-link small">
-                    <div class="icon-box"><i class="fa-solid fa-briefcase"></i></div>
-                    <span>View Full Portfolio</span>
-                </a>
-            </div>
+            <!-- INQUIRY -->
+            <a href="inquiry.html" class="btn-link">
+                <div class="icon-box"><i class="fa-solid fa-paper-plane"></i></div>
+                <span>Send Inquiry</span>
+            </a>
 
-            <!-- LOCATION -->
-            <div class="portfolio-section">
-                <p class="section-title">Location</p>
-                <a href="https://share.google/4YJ1C0hTWcjlnvZ3s" target="_blank" class="btn-link small">
-                    <div class="icon-box"><i class="fa-solid fa-location-dot"></i></div>
-                    <span>ROM Design – Surat</span>
-                </a>
-            </div>
-
-            <div class="share-section">
-                <p class="section-title">Share Profile</p>
-
-                <div class="share-url">
-                    <input type="text" value="https://card.romdesigner.in/" readonly>
-                    <button onclick="copyLink()"><i class="fa-regular fa-copy"></i></button>
-                </div>
-
-                <p class="qr-text">Scan QR to open profile</p>
-
-                <img src="static-qr-code-52cb161a8090b6bfad1374d3d59ae28c.png" alt="QR Code" class="qr-img">
-
-                <a href="static-qr-code-52cb161a8090b6bfad1374d3d59ae28c.png" download class="btn-link small">
-                    <div class="icon-box"><i class="fa-solid fa-download"></i></div>
-                    <span>Save QR</span>
-                </a>
-
-                <div class="wp-share">
-                    <span>(+91)</span>
-                    <input type="tel" id="wpNumber" placeholder="Enter whatsapp number">
-                    <button onclick="shareWP()">
-                        <i class="fa-brands fa-whatsapp"></i> Share
-                    </button>
-                </div>
-            </div>
-
-            <!-- FOOTER -->
-            <footer class="footer">© 2026 ROM Designer</footer>
+            <a href="https://www.instagram.com/romdesignstudio/" target="_blank" class="btn-link">
+                <div class="icon-box"><i class="fa-brands fa-instagram"></i></div>
+                <span>Instagram</span>
+            </a>
 
         </div>
+
+        <!-- PORTFOLIO -->
+        <div class="portfolio-section">
+            <p class="section-title">Portfolio</p>
+            <a href="portfolio.html" class="btn-link small">
+                <div class="icon-box"><i class="fa-solid fa-briefcase"></i></div>
+                <span>View Full Portfolio</span>
+            </a>
+        </div>
+
+        <!-- LOCATION -->
+        <div class="portfolio-section">
+            <p class="section-title">Location</p>
+            <a href="https://share.google/4YJ1C0hTWcjlnvZ3s" target="_blank" class="btn-link small">
+                <div class="icon-box"><i class="fa-solid fa-location-dot"></i></div>
+                <span>ROM Design – Surat</span>
+            </a>
+        </div>
+
+        <!-- SHARE -->
+        <div class="share-section">
+            <p class="section-title">Share Profile</p>
+
+            <div class="share-url">
+                <input type="text" value="https://card.romdesigner.in/" readonly>
+                <button onclick="copyLink()"><i class="fa-regular fa-copy"></i></button>
+            </div>
+
+            <p class="qr-text">Scan QR to open profile</p>
+
+            <img src="static-qr-code-52cb161a8090b6bfad1374d3d59ae28c.png"
+                 alt="QR Code" class="qr-img">
+
+            <a href="static-qr-code-52cb161a8090b6bfad1374d3d59ae28c.png"
+               download class="btn-link small">
+                <div class="icon-box"><i class="fa-solid fa-download"></i></div>
+                <span>Save QR</span>
+            </a>
+
+            <div class="wp-share">
+                <span>(+91)</span>
+                <input type="tel" id="wpNumber" placeholder="Enter whatsapp number">
+                <button onclick="shareWP()">
+                    <i class="fa-brands fa-whatsapp"></i> Share
+                </button>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="footer">© 2026 ROM Designer</footer>
+
     </div>
+</div>
 
-    <script>
-        const ytToggle = document.getElementById("ytToggle");
-        const ytSlider = document.getElementById("ytSlider");
-        const ytTrack = document.getElementById("ytTrack");
-        let ytIndex = 0;
+<!-- SCRIPT -->
+<script>
+const ytToggle = document.getElementById("ytToggle");
+const ytSlider = document.getElementById("ytSlider");
+const ytTrack = document.getElementById("ytTrack");
+let ytIndex = 0;
 
-        ytToggle.onclick = () => {
-            ytSlider.style.display =
-                ytSlider.style.display === "block" ? "none" : "block";
-        };
+ytToggle.onclick = () => {
+    ytSlider.style.display =
+        ytSlider.style.display === "block" ? "none" : "block";
+};
 
-        function slideYT(direction) {
-            const total = ytTrack.children.length;
-            ytIndex = (ytIndex + direction + total) % total;
+function slideYT(direction) {
+    const total = ytTrack.children.length;
+    ytIndex = (ytIndex + direction + total) % total;
 
-            ytTrack.scrollTo({
-                top: ytIndex * ytTrack.offsetHeight,
-                behavior: "smooth"
-            });
-        }
+    ytTrack.scrollTo({
+        top: ytIndex * ytTrack.offsetHeight,
+        behavior: "smooth"
+    });
+}
 
-        function copyLink() {
-            navigator.clipboard.writeText("https://card.romdesigner.in/");
-            alert("Link copied!");
-        }
+function copyLink() {
+    const link = document.querySelector(".share-url input").value;
+    navigator.clipboard.writeText(link);
+    alert("Link copied!");
+}
 
-        function shareWP() {
-            const num = document.getElementById("wpNumber").value;
-            if (!num) return alert("Enter WhatsApp number");
-            const url =
-                `https://wa.me/91${num}?text=Check%20my%20profile:%20https://qr.bytecard.in/rom-design/rom-design`;
-            window.open(url, "_blank");
-        }
-    </script>
+function shareWP() {
+    const num = document.getElementById("wpNumber").value;
+    if (!num) return alert("Enter WhatsApp number");
+
+    const url =
+        `https://wa.me/91${num}?text=Check%20my%20profile:%20https://card.romdesigner.in/`;
+
+    window.open(url, "_blank");
+}
+</script>
 
 </body>
-
 </html>
 
-</html>
