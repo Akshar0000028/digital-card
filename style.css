@@ -271,10 +271,7 @@ h1 {
     background: rgba(255,255,255,0.9);
 }
 
-.portfolio-section .btn-link.small:hover {
-    background-color: #474343;
-    color: #ffffff;
-}
+
 
 /* =========================
    SHARE SECTION
@@ -361,3 +358,11 @@ h1 {
     font-size: 14px;
     opacity: 0.8;
 }
+
+
+/* FORCE hover color for Back button */
+.portfolio-section .btn-link.small:hover {
+    background-color: #474343 !important;
+    color: #ffffff !important;
+}
+
