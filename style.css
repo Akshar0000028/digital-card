@@ -110,77 +110,9 @@ h1 {
 }
 
 /* =========================
-   LINKS CONTAINER
+   CONTAINERS
    ========================= */
-.links-container {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-/* =========================
-   PERFECT STRAIGHT BUTTONS
-   ========================= */
-.btn-link {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-
-    width: 100%;
-    height: 56px;                 /* 🔒 fixed height */
-    padding: 0 22px;              /* ❌ no vertical padding */
-
-    background: #ffffff;
-    color: #011F18;
-
-    border-radius: 9999px;        /* perfect pill */
-    text-decoration: none;
-    font-weight: 500;
-
-    box-sizing: border-box;
-    line-height: 1;
-
-    -webkit-font-smoothing: antialiased;
-    text-rendering: geometricPrecision;
-
-    transition: background-color 0.25s ease, transform 0.15s ease;
-}
-
-/* ICON ALIGNMENT (CRITICAL FIX) */
-.icon-box {
-    width: 28px;
-    height: 28px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    margin-right: 14px;
-    font-size: 18px;
-    line-height: 1;
-}
-
-/* TEXT ALIGNMENT */
-.btn-link span {
-    font-size: 16px;
-    line-height: 1;
-    white-space: nowrap;
-}
-
-/* HOVER EFFECT */
-.btn-link:hover {
-    background-color: #474343;
-    color: #ffffff;
-    transform: translateY(-1px);
-}
-
-/* =========================
-   PORTFOLIO / LOCATION
-   ========================= */
-/* =========================
-   PORTFOLIO SECTION ONLY
-   ========================= */
-
+.links-container,
 .portfolio-section {
     display: flex;
     flex-direction: column;
@@ -188,8 +120,10 @@ h1 {
     margin-top: 25px;
 }
 
-/* Portfolio title */
-.portfolio-section .section-title {
+/* =========================
+   SECTION TITLE
+   ========================= */
+.section-title {
     font-size: 12px;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -197,14 +131,16 @@ h1 {
     text-align: center;
 }
 
-/* Portfolio buttons */
-.portfolio-section .btn-link {
+/* =========================
+   BUTTON SYSTEM (ONE SOURCE)
+   ========================= */
+.btn-link {
     display: flex;
     align-items: center;
 
     width: 100%;
-    height: 56px;                 /* fixed height */
-    padding: 0 22px;              /* no vertical padding */
+    height: 56px;
+    padding: 0 22px;
 
     background: #ffffff;
     color: #011F18;
@@ -222,11 +158,10 @@ h1 {
     transition: background-color 0.25s ease, transform 0.15s ease;
 }
 
-/* Icon inside portfolio button */
-.portfolio-section .icon-box {
+/* ICON */
+.icon-box {
     width: 28px;
     height: 28px;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -236,42 +171,35 @@ h1 {
     line-height: 1;
 }
 
-/* Text inside portfolio button */
-.portfolio-section .btn-link span {
+/* TEXT */
+.btn-link span {
     font-size: 16px;
     line-height: 1;
     white-space: nowrap;
 }
 
-/* Hover effect */
-.portfolio-section .btn-link:hover {
+/* HOVER (GLOBAL – ALL BUTTONS) */
+.btn-link:hover {
     background-color: #474343;
     color: #ffffff;
     transform: translateY(-1px);
 }
 
-/* Small button (View portfolio / Back button) */
-.portfolio-section .btn-link.small {
-    height: 46px;
-    padding: 0 18px;
-    font-size: 14px;
-}
-
-
-.section-title {
-    font-size: 12px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-}
-
+/* =========================
+   SMALL BUTTON (PORTFOLIO / BACK)
+   ========================= */
 .btn-link.small {
     height: 46px;
+    padding: 0 18px;
     font-size: 14px;
     background: rgba(255,255,255,0.9);
 }
 
-
+/* ENSURE SMALL BUTTON HOVER IS SAME */
+.btn-link.small:hover {
+    background-color: #474343;
+    color: #ffffff;
+}
 
 /* =========================
    SHARE SECTION
@@ -316,7 +244,7 @@ h1 {
 }
 
 /* =========================
-   WHATSAPP SHARE FIX
+   WHATSAPP SHARE
    ========================= */
 .wp-share {
     display: flex;
@@ -358,11 +286,3 @@ h1 {
     font-size: 14px;
     opacity: 0.8;
 }
-
-
-/* FORCE hover color for Back button */
-.portfolio-section .btn-link.small:hover {
-    background-color: #474343 !important;
-    color: #ffffff !important;
-}
-
