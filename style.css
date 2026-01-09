@@ -177,9 +177,86 @@ h1 {
 /* =========================
    PORTFOLIO / LOCATION
    ========================= */
+/* =========================
+   PORTFOLIO SECTION ONLY
+   ========================= */
+
 .portfolio-section {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
     margin-top: 25px;
 }
+
+/* Portfolio title */
+.portfolio-section .section-title {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    text-align: center;
+}
+
+/* Portfolio buttons */
+.portfolio-section .btn-link {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    height: 56px;                 /* fixed height */
+    padding: 0 22px;              /* no vertical padding */
+
+    background: #ffffff;
+    color: #011F18;
+
+    border-radius: 9999px;
+    text-decoration: none;
+    font-weight: 500;
+
+    line-height: 1;
+    box-sizing: border-box;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: geometricPrecision;
+
+    transition: background-color 0.25s ease, transform 0.15s ease;
+}
+
+/* Icon inside portfolio button */
+.portfolio-section .icon-box {
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 14px;
+    font-size: 18px;
+    line-height: 1;
+}
+
+/* Text inside portfolio button */
+.portfolio-section .btn-link span {
+    font-size: 16px;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+/* Hover effect */
+.portfolio-section .btn-link:hover {
+    background-color: #474343;
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+/* Small button (View portfolio / Back button) */
+.portfolio-section .btn-link.small {
+    height: 46px;
+    padding: 0 18px;
+    font-size: 14px;
+}
+
 
 .section-title {
     font-size: 12px;
