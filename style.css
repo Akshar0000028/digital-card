@@ -1,6 +1,4 @@
-/* =========================
-   RESET
-   ========================= */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -17,9 +15,7 @@ body {
     padding: 20px;
 }
 
-/* =========================
-   CARD
-   ========================= */
+/* CARD */
 .card-wrapper {
     position: relative;
     width: 100%;
@@ -31,9 +27,23 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
-/* =========================
-   DECORATION
-   ========================= */
+/* VIEW COUNTER */
+.view-counter {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 20;
+    background: #000;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* DECORATIONS */
 .decoration {
     position: absolute;
     width: 80px;
@@ -41,33 +51,12 @@ body {
     background-color: #474343;
 }
 
-.top-left {
-    top: 0;
-    left: 0;
-    border-bottom-right-radius: 100%;
-}
+.top-left { top: 0; left: 0; border-bottom-right-radius: 100%; }
+.top-right { top: 0; right: 0; border-bottom-left-radius: 100%; }
+.bottom-left { bottom: 0; left: 0; border-top-right-radius: 100%; }
+.bottom-right { bottom: 0; right: 0; border-top-left-radius: 100%; }
 
-.top-right {
-    top: 0;
-    right: 0;
-    border-bottom-left-radius: 100%;
-}
-
-.bottom-left {
-    bottom: 0;
-    left: 0;
-    border-top-right-radius: 100%;
-}
-
-.bottom-right {
-    bottom: 0;
-    right: 0;
-    border-top-left-radius: 100%;
-}
-
-/* =========================
-   CONTENT
-   ========================= */
+/* CONTENT */
 .card-content {
     position: relative;
     z-index: 10;
@@ -75,9 +64,7 @@ body {
     text-align: center;
 }
 
-/* =========================
-   HEADER
-   ========================= */
+/* HEADER */
 .logo-circle {
     width: 90px;
     height: 90px;
@@ -93,25 +80,11 @@ body {
     object-fit: cover;
 }
 
-h1 {
-    font-size: 28px;
-    font-weight: 600;
-}
+h1 { font-size: 28px; font-weight: 600; }
+.subtitle { font-size: 16px; margin: 8px 0; }
+.slogan { font-size: 14px; opacity: 0.8; margin-bottom: 30px; }
 
-.subtitle {
-    font-size: 16px;
-    margin: 8px 0;
-}
-
-.slogan {
-    font-size: 14px;
-    opacity: 0.8;
-    margin-bottom: 30px;
-}
-
-/* =========================
-   CONTAINERS
-   ========================= */
+/* CONTAINERS */
 .links-container,
 .portfolio-section {
     display: flex;
@@ -120,94 +93,67 @@ h1 {
     margin-top: 25px;
 }
 
-/* =========================
-   SECTION TITLE
-   ========================= */
+/* TITLES */
 .section-title {
     font-size: 12px;
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 6px;
-    text-align: center;
 }
 
-/* =========================
-   BUTTON SYSTEM (ONE SOURCE)
-   ========================= */
+/* BUTTON SYSTEM */
 .btn-link {
     display: flex;
     align-items: center;
-
+    justify-content: flex-start;
     width: 100%;
     height: 56px;
     padding: 0 22px;
-
-    background: #ffffff;
+    background: #fff;
     color: #011F18;
-
     border-radius: 9999px;
     text-decoration: none;
     font-weight: 500;
-
     line-height: 1;
-    box-sizing: border-box;
-
-    -webkit-font-smoothing: antialiased;
-    text-rendering: geometricPrecision;
-
     transition: background-color 0.25s ease, transform 0.15s ease;
 }
 
-/* ICON */
 .icon-box {
     width: 28px;
     height: 28px;
     display: flex;
     align-items: center;
     justify-content: center;
-
     margin-right: 14px;
     font-size: 18px;
     line-height: 1;
 }
 
-/* TEXT */
 .btn-link span {
     font-size: 16px;
     line-height: 1;
-    white-space: nowrap;
 }
 
-/* HOVER (GLOBAL – ALL BUTTONS) */
 .btn-link:hover {
     background-color: #474343;
-    color: #ffffff;
+    color: #fff;
     transform: translateY(-1px);
 }
 
-/* =========================
-   SMALL BUTTON (PORTFOLIO / BACK)
-   ========================= */
+/* SMALL BUTTON */
 .btn-link.small {
     height: 46px;
     padding: 0 18px;
-    font-size: 14px;
     background: rgba(255,255,255,0.9);
 }
 
-/* ENSURE SMALL BUTTON HOVER IS SAME */
 .btn-link.small:hover {
     background-color: #474343;
-    color: #ffffff;
+    color: #fff;
 }
 
-/* =========================
-   SHARE SECTION
-   ========================= */
-.share-section {
-    margin-top: 30px;
-    overflow: hidden;
-}
+/* SHARE */
+.share-section { margin-top: 30px; }
 
 .share-url {
     display: flex;
@@ -231,10 +177,7 @@ h1 {
     cursor: pointer;
 }
 
-.qr-text {
-    font-size: 14px;
-    margin: 10px 0;
-}
+.qr-text { font-size: 14px; margin: 10px 0; }
 
 .qr-img {
     width: 180px;
@@ -243,26 +186,15 @@ h1 {
     margin-bottom: 15px;
 }
 
-/* =========================
-   WHATSAPP SHARE
-   ========================= */
+/* WHATSAPP SHARE */
 .wp-share {
     display: flex;
     gap: 8px;
     margin-top: 15px;
-    width: 100%;
 }
 
-.wp-share span {
-    background: #fff;
-    padding: 10px 12px;
-    border-radius: 10px;
-    white-space: nowrap;
-}
-
+.wp-share span,
 .wp-share input {
-    flex: 1;
-    min-width: 0;
     padding: 10px;
     border-radius: 10px;
     border: none;
@@ -275,12 +207,9 @@ h1 {
     padding: 10px 14px;
     border: none;
     cursor: pointer;
-    white-space: nowrap;
 }
 
-/* =========================
-   FOOTER
-   ========================= */
+/* FOOTER */
 .footer {
     margin-top: 40px;
     font-size: 14px;
